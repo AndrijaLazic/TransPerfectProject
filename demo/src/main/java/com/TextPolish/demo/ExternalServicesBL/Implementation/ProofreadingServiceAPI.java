@@ -4,17 +4,20 @@ import com.TextPolish.demo.ExternalServicesBL.Interface.IProofreadingServiceAPI;
 import com.TextPolish.demo.Model.Request.PolishRequest;
 import com.TextPolish.demo.Model.Response.ProofreadResponse;
 import jakarta.annotation.PostConstruct;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+
 @RequiredArgsConstructor
 @Service
 public class ProofreadingServiceAPI implements IProofreadingServiceAPI {
-    private RestTemplate restTemplate;
+    
+    private RestTemplate restTemplate = new RestTemplate();
 
     @Value("${PROOFREADING_SERVICE_API_URL:}")
     private String ProofreadingServiceApiUrl;
