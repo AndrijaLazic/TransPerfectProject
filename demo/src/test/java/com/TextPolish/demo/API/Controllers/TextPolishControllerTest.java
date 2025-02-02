@@ -63,7 +63,7 @@ class TextPolishControllerTest {
         PolishRequest polishRequest = new PolishRequest();
         polishRequest.setLanguage("en-US");
         polishRequest.setDomain("academic");
-        polishRequest.setContent("mark type=\"bold\" size=\"13\"/>I hope i get hired mark type=\"bold\" size=\"13\"/>");
+        polishRequest.setContent("<mark type=\"bold\" size=\"13\"/>I hope i get hired <mark type=\"bold\" size=\"13\"/><mark type=\"bold\" size=\"13\"/>");
 
         String jsonRequest = new ObjectMapper().writeValueAsString(polishRequest);
 
