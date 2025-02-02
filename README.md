@@ -1,0 +1,1 @@
+Before starting the project you only need to change PROOFREADING_SERVICE_API_URL inside of application.properties.
